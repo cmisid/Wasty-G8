@@ -87,19 +87,9 @@ def price_prediction(pu_req):
         rf = RandomForestRegressor(n_estimators=1000)
         # Entrainement du modele avec les donnees adequats
         rf.fit(X_train, Y_train)
+        prediction = rf.predict(X_pred).item()
         # Prediction
-        return rf.predict(X_pred).item()
+        return [prediction-0.1*prediction, prediction+0.1*prediction]
     else:
-        return 0
-
-
-u_req = ['artisan',
-         '',
-         'bon etat',
-         '1',
-         '',
-         '',
-         '']
-
-izi = price_prediction(u_req)
+        return [0, 0]
 
