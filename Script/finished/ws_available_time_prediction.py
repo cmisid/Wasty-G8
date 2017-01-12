@@ -1,3 +1,9 @@
+## --------------------------------------------------------
+# Projet : WASTY
+# Groupe 8 : Prediction et recommandation
+# Objectif : Web service affichant le temps de disponibilite predit pour un objet   
+## --------------------------------------------------------
+
 from flask import Flask, jsonify
 from available_time_prediction import available_time_prediction
 

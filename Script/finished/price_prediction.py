@@ -1,16 +1,11 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Wed Jan 11 10:34:04 2017
-
-@author: Giovanni
-"""
-
-# -*- coding: utf-8 -*-
-"""
-Created on Wed Jan 11 08:43:37 2017
-
-@author: Giovanni
-"""
+# Version 1 : première prédiction en R - modèle
+# de regression linéaire 
+# Version 2 : condition "a donner " sans prédiction
+# Version 3 : randomForest
+# Version 4 : boucle pour stabilisé la pred
+# Version 5 : traduction en python
+# Version 6 : modification des variables en qualitative
+# Vesion 7 : ajout de l'interval
 
 ## --------------------------------------------------------
 # Projet : WASTY DataBase
@@ -18,6 +13,7 @@ Created on Wed Jan 11 08:43:37 2017
 # Objectif : La prédiction des prix
 # Par : Giovanni Zanitti - CHRISMANN Céline - QUESNOT Sandy
 ## --------------------------------------------------------
+
 import json
 import pandas as pd
 from sklearn.ensemble import RandomForestRegressor
@@ -44,6 +40,10 @@ var_req = ['buy_place',
            'situation',
            'volume']
 
+
+# Entrée :  liste des données saisies par l'utiliateur
+# Objectif : prédir un prix adequat
+# Sortie : intervalle de prix prédit
 
 def price_prediction(pu_req):
      # Si l'utilisateur ne met pas en situation "a donner":

@@ -1,9 +1,13 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Tue Jan 10 09:37:47 2017
+# Version 1 : Recommandation des annonces en 
+# fonction du profil en R
+# Version 2 : traduction en python
 
-@author: Giovanni
-"""
+## --------------------------------------------------------
+# Projet : WASTY
+# Groupe 8 : Prédiction et recommandation
+# Objectif : La prédiction du temps de disponibilité d'un
+## --------------------------------------------------------
 
 # Import des librairies
 import pandas as pd

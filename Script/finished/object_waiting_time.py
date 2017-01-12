@@ -1,9 +1,14 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Mon Jan  9 09:49:25 2017
-
-@author: Giovanni Zanitti & Sofian Benjebria
-"""
+# Version 1: Calculer la probabilite d'apparition d'un 
+#objet dans l'heure, le jour, la semaine et le mois qui suit sous R 
+# Objectif: Calculer la probabilite d'apparition d'un
+# objet dans l'heure, le jour, la semaine et le mois qui suit sous Python
+##---------------------------------------------------
+# Projet WASTY DataBase
+# Groupe 8
+# Objectif: Calculer la probabilite d'apparition d'un
+# objet dans l'heure, le jour, la semaine et le mois qui suit
+##---------------------------------------------------
 
 import pandas as pd
 import json
@@ -19,14 +24,14 @@ df = pd.read_json(data)
 
 
 
-######### Fonction waiting_time
-######### Entrees : id sous categorie et etat de l'objet
-######### Objectif : Calculer la probabilite d'apparition d'un objet dans l'heure, le jour, la semaine et le mois qui suit.
-######### Sorties : Probabilites d'appartition dans l'heure, le jour, la semaine et le mois qui suit.
-######### A ameliorer : 
-#########   si le user ne renseigne pas l'etat
-#########   chercher les positions gps dans les données pour restreindre
-#########   la zone de recherche
+# Prédiction du temps dattente avant qu'un objet soit disponible 
+# Entrees : id sous categorie et etat de l'objet
+# Objectif : Calculer la probabilite d'apparition
+# d'un objet dans l'heure, le jour, la semaine et 
+# le mois qui suit.
+# Sorties : Probabilites d'appartition dans l'heure, 
+# le jour, la semaine et le mois qui suit
+
 
 def object_waiting_time(pid_sub_category, padvert_state):
 

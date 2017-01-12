@@ -1,9 +1,6 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Thu Jan 12 14:28:55 2017
-
-@author: Groupe 8 : Prediction et recommandation
-"""
+# Version 1 : Prédiction du temps de disponibilité en R 
+# Version 2 : Traduction en python
 
 ## --------------------------------------------------------
 # Projet : WASTY
@@ -11,6 +8,7 @@ Created on Thu Jan 12 14:28:55 2017
 # Objectif : La prédiction du temps de disponibilité d'un
 # objet
 ## --------------------------------------------------------
+
 
 import json
 import pandas as pd
@@ -62,6 +60,13 @@ var_req = ['buy_place',
 #calcul du temps disponible 
 df['available_time'] = df.recovery_date - df.date
 df['available_time'] = df['available_time'].dt.total_seconds()
+
+# Entrée : liste des données saisies par l'utilisateur 
+# 'buy_place','forecast_price','id_sub_category','object_state',
+# 'quantite','situation','type_place','volume'
+# Objectif : Prédire la durée de disponibilité d'un objet en 
+# fonction des données saisies
+# Sortie : Une durée en Jours-Heures-Minutes-Secondes
 
 def available_time_prediction(pu_req):
     # Conversion de certaines donnees en format numerique
